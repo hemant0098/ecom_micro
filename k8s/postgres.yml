@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgres
-  namespace: ecom_micro
+  namespace: ecom-micro
 spec:
   replicas: 1
   selector:
@@ -33,9 +33,9 @@ spec:
   - metadata:
       name: postgres
     spec:
-      accessMode:
+      accessModes:
       - ReadWriteOnce
-      storageClassName: "gp2"
+      storageClassName: standard
       resources:
         requests:
           storage: 1Gi
@@ -46,7 +46,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres
-  namespace: ecom_micro
+  namespace: ecom-micro
 spec:
   selector:
     app: postgres
