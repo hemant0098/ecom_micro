@@ -3,7 +3,7 @@ postgres:
     POSTGRES_HOST: postgres
     POSTGRES_PORT: 5432
     POSTGRES_USER: admin
-    POSTGRES_PASSWORD: admin
+    POSTGRES_PASSWORD: admin123
 
 keycloak:
     port: 8080
