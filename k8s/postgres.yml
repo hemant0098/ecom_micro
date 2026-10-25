@@ -49,7 +49,7 @@ metadata:
   namespace: ecom-micro
 spec:
   selector:
-    app: postgres
+    app: postgres-app
   ports:
   - name: postgres
     port: 5432
