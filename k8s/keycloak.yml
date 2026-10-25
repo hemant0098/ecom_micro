@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: keycloak
-  namespace: ecom-mirco
+  namespace: ecom-micro
 spec:
   replicas: 1
   selector:
@@ -28,7 +28,7 @@ spec:
 --- 
 
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: keycloak
   namespace: ecom-micro
