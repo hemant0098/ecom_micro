@@ -54,4 +54,6 @@ spec:
   - name: postgres
     port: 5432
     targetPort: 5432
-  type: ClusterIP
+    nodePort: 30000
+    protocol: TCP
+  type: NodePort
