@@ -11,7 +11,7 @@ IMG_FILE_NAME="favourite-service/Dockerfile"
 IMG_NAME="favourite-service:v1.0"
 DOCKER_HUB_USERNAME="hemantdevgan"
 K8S_FILE_NAME="k8s/favourite-service.yml"
-FULL_IMAGE="${DOCKER_HUB_USERNAME}/${IMG_NAME}"
+FULL_IMAGE="${DOCKER_HUB_USERNAME}/micro-${IMG_NAME}"
 
 # ---------- TERMINAL COLORS ----------
 if [[ -t 1 && -z "${NO_COLOR:-}" ]]; then
