@@ -25,6 +25,10 @@ spec:
           value: "http://keycloak:8080/realms/ecommerce"
         - name: KEYCLOAK_SERVER_URL
           value: "http://keycloak:8080"
+        - name: POSTGRES_USER
+          value: "admin"
+        - nmae: POSTGRES_PASSWORD
+          value: "admin123"
 
 ---
 
