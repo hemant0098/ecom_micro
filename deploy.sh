@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 set -Eeuo pipefail
 
@@ -153,4 +152,4 @@ printf "  ${WHITE}kubectl get svc -A${RESET}\n"
 printf "  ${WHITE}kubectl rollout status deployment/favourite-service${RESET}\n"
 line
 printf "${PURPLE}[*] Pipeline finished. Stay sharp, DevOps engineer.${RESET}\n\n"
-```
+
