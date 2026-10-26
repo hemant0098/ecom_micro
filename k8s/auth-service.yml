@@ -27,7 +27,7 @@ spec:
           value: "http://keycloak:8080"
         - name: POSTGRES_USER
           value: "admin"
-        - nmae: POSTGRES_PASSWORD
+        - name: POSTGRES_PASSWORD
           value: "admin123"
 
 ---
