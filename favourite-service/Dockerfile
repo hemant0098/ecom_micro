@@ -1,3 +1,10 @@
-FROM eclipse-temurin:21-jre-alpine
-COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY . .
+RUN mvn -pl favourite-service -am clean package -DskipTests
+
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY --from=build /app/favourite-service/target/*.jar app.jar
+EXPOSE 8088
+CMD [ "java", "-jar", "app.jar" ]
