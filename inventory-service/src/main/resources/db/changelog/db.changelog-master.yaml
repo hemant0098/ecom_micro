@@ -1,8 +1,24 @@
+
 databaseChangeLog:
   - changeSet:
-      id: inventory-service-0001-bootstrap
-      author: codex
-      comment: Bootstrap Liquibase for inventory-service.
+      id: inventory-service-0001-create-inventory
+      author: inventory
       changes:
-        - sql:
-            sql: SELECT 1;
+        - createTable:
+            tableName: inventory
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: productName
+                  type: VARCHAR(255)
+
+              - column:
+                  name: quantity
+                  type: INTEGER

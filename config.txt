@@ -23,3 +23,9 @@ favourite-service:
     SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/favouriteservice
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
+
+inventory-service:
+    port: 8082
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/favouriteservice
+    JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
+    KEYCLOAK_SERVER_URL: http://keycloak:8080
