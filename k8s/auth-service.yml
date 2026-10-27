@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: auth-service
-        image: hemantdevgan/micro-auth-service:v1.0
+         image: hemantdevgan/micro-auth-service:v1.0
         ports:
         - containerPort: 8088
         env:
@@ -31,7 +31,6 @@ spec:
           value: "admin123"
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -42,7 +41,7 @@ spec:
     app: auth-service
   type: NodePort
   ports:
-  - port: 8088
-    targetPort: 8088
-    nodePort: 30002
-    protocol: TCP
+    - port: 8088
+      targetPort: 8088
+      nodePort: 30002
+      protocol: TCP
