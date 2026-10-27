@@ -20,7 +20,7 @@ spec:
         - containerPort: 8082
         env:
         - name: SPRING_DATASOURCE_URL
-          value: "jdbc:postgresql://postgres:5432/authservice"
+          value: "jdbc:postgresql://postgres:5432/inventoryservice"
         - name: JWT_ISSUER_URI
           value: "http://keycloak:8080/realms/ecommerce"
         - name: KEYCLOAK_SERVER_URL
