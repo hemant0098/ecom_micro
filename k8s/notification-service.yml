@@ -38,7 +38,7 @@ metadata:
   namespace: ecom-micro
 spec:
   selector:
-    app: media-service
+    app: notification-service
   type: ClusterIP
   ports:
     - port: 8090
