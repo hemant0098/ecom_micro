@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notfication-service
-        image: hemantdevgan/micro-notfication-service:v1.0
+        image: hemantdevgan/micro-notification-service:v1.0
         ports:
         - containerPort: 8090
         env:
@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: inventory-service
+  name: notification-service
   namespace: ecom-micro
 spec:
   selector:
