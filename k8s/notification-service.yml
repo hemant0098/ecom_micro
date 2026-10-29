@@ -29,6 +29,8 @@ spec:
           value: "admin"
         - name: POSTGRES_PASSWORD
           value: "admin123"
+        - name: KAFKA_SERVERS
+          value: "kafka:9092"
 
 ---
 apiVersion: v1
