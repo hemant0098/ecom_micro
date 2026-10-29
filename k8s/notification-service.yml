@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  namespace: ecom-micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      containers:
+      - name: notfication-service
+        image: hemantdevgan/micro-notfication-service:v1.0
+        ports:
+        - containerPort: 8090
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://postgres:5432/notificationservice"
+        - name: JWT_ISSUER_URI
+          value: "http://keycloak:8080/realms/ecommerce"
+        - name: KEYCLOAK_SERVER_URL
+          value: "http://keycloak:8080"
+        - name: POSTGRES_USER
+          value: "admin"
+        - name: POSTGRES_PASSWORD
+          value: "admin123"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-service
+  namespace: ecom-micro
+spec:
+  selector:
+    app: inventory-service
+  type: ClusterIP
+  ports:
+    - port: 8090
+      targetPort: 8090

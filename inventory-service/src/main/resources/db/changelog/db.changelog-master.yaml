@@ -16,7 +16,7 @@ databaseChangeLog:
                     nullable: false
 
               - column:
-                  name: productName
+                  name: product_name
                   type: VARCHAR(255)
 
               - column:
