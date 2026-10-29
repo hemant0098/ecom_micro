@@ -29,6 +29,11 @@ spec:
           value: "admin"
         - name: POSTGRES_PASSWORD
           value: "admin123"
+        - name: STORAGE_ENDPOINT
+          value: http://rustfs:9000
+        - name: STORAGE_ACCESS_KEY
+        - name: STORAGE_SECRET_KEY
+          value: rustfsadmin
 
 ---
 apiVersion: v1
