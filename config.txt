@@ -42,3 +42,12 @@ media-service:
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
 
+rustfs-s3-compatable:
+    endpoint: http://localhost:9000
+       region: us-east-1
+       access-key: rustfsadmin
+       secret-key: rustfsadmin
+       bucket: ecommerce-media
+       path-style-access: true
+       auto-create-bucket: true
+       presign-duration: 1h
