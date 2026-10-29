@@ -51,3 +51,9 @@ rustfs-s3-compatable:
        path-style-access: true
        auto-create-bucket: true
        presign-duration: 1h
+
+order-service:
+    port: 8084
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/orderservice
+    JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
+    KEYCLOAK_SERVER_URL: http://keycloak:8080

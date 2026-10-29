@@ -7,10 +7,10 @@ set -Eeuo pipefail
 # ╚══════════════════════════════════════════════╝
 
 # ---------- CONFIGURATION ----------
-IMG_FILE_NAME="notification-service/Dockerfile"
-IMG_NAME="notification-service:v1.4"
+IMG_FILE_NAME="order-service/Dockerfile"
+IMG_NAME="order-service:v1.4"
 DOCKER_HUB_USERNAME="hemantdevgan"
-K8S_FILE_NAME="k8s/notification-service.yml"
+K8S_FILE_NAME="k8s/order-service.yml"
 FULL_IMAGE="${DOCKER_HUB_USERNAME}/micro-${IMG_NAME}"
 
 # ---------- TERMINAL COLORS ----------
