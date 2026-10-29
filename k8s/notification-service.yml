@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notfication-service
-        image: hemantdevgan/micro-notification-service:v1.1
+        image: hemantdevgan/micro-notification-service:v1.2
         ports:
         - containerPort: 8090
         env:
