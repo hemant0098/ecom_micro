@@ -32,6 +32,13 @@ inventory-service:
 
 notification-service:
     port: 8090
-    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ecommerce
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/notificationservice
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
+
+media-service:
+    port: 8083
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mediaservice
+    JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
+    KEYCLOAK_SERVER_URL: http://keycloak:8080
+

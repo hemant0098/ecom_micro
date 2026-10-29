@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: media-service
+  namespace: ecom-micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: media-service
+  template:
+    metadata:
+      labels:
+        app: media-service
+    spec:
+      containers:
+      - name: media-service
+        image: hemantdevgan/micro-media-service:v1.0
+        ports:
+        - containerPort: 8083
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://postgres:5432/mediaservice"
+        - name: JWT_ISSUER_URI
+          value: "http://keycloak:8080/realms/ecommerce"
+        - name: KEYCLOAK_SERVER_URL
+          value: "http://keycloak:8080"
+        - name: POSTGRES_USER
+          value: "admin"
+        - name: POSTGRES_PASSWORD
+          value: "admin123"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification-service
+  namespace: ecom-micro
+spec:
+  selector:
+    app: inventory-service
+  type: ClusterIP
+  ports:
+    - port: 8083
+      targetPort: 8083
