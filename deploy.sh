@@ -7,10 +7,10 @@ set -Eeuo pipefail
 # ╚══════════════════════════════════════════════╝
 
 # ---------- CONFIGURATION ----------
-IMG_FILE_NAME="search-service/Dockerfile"
-IMG_NAME="search-service:v1.0"
+IMG_FILE_NAME="shipping-service/Dockerfile"
+IMG_NAME="shipping-service:v1.0"
 DOCKER_HUB_USERNAME="hemantdevgan"
-K8S_FILE_NAME="k8s/search-service.yml"
+K8S_FILE_NAME="k8s/shipping-service.yml"
 FULL_IMAGE="${DOCKER_HUB_USERNAME}/micro-${IMG_NAME}"
 
 # ---------- TERMINAL COLORS ----------
