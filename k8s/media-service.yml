@@ -34,11 +34,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: notification-service
+  name: media-service
   namespace: ecom-micro
 spec:
   selector:
-    app: inventory-service
+    app: media-service
   type: ClusterIP
   ports:
     - port: 8083
