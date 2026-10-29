@@ -7,10 +7,10 @@ set -Eeuo pipefail
 # ╚══════════════════════════════════════════════╝
 
 # ---------- CONFIGURATION ----------
-IMG_FILE_NAME="payment-service/Dockerfile"
-IMG_NAME="payment-service:v1.0"
+IMG_FILE_NAME="product-service/Dockerfile"
+IMG_NAME="product-service:v1.0"
 DOCKER_HUB_USERNAME="hemantdevgan"
-K8S_FILE_NAME="k8s/payment-service.yml"
+K8S_FILE_NAME="k8s/product-service.yml"
 FULL_IMAGE="${DOCKER_HUB_USERNAME}/micro-${IMG_NAME}"
 
 # ---------- TERMINAL COLORS ----------

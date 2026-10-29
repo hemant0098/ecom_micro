@@ -60,9 +60,15 @@ order-service:
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
 
-order-service:
+product-service:
+    port: 8086
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/productservice
+    JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
+    KEYCLOAK_SERVER_URL: http://keycloak:8080
+
+payment-service:
     port: 8085
-    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/orderservice
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/paymentservice
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
     - name: KAFKA_SERVERS
