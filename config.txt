@@ -35,6 +35,8 @@ notification-service:
     SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/notificationservice
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
+    - name: KAFKA_SERVERS
+          value: "kafka:9092"
 
 media-service:
     port: 8083
@@ -57,3 +59,11 @@ order-service:
     SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/orderservice
     JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
     KEYCLOAK_SERVER_URL: http://keycloak:8080
+
+order-service:
+    port: 8085
+    SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/orderservice
+    JWT_ISSUER_URI: http://keycloak:8080/realms/ecommerce
+    KEYCLOAK_SERVER_URL: http://keycloak:8080
+    - name: KAFKA_SERVERS
+          value: "kafka:9092"
