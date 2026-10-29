@@ -8,7 +8,7 @@ set -Eeuo pipefail
 
 # ---------- CONFIGURATION ----------
 IMG_FILE_NAME="payment-service/Dockerfile"
-IMG_NAME="payment-service:v1.4"
+IMG_NAME="payment-service:v1.0"
 DOCKER_HUB_USERNAME="hemantdevgan"
 K8S_FILE_NAME="k8s/payment-service.yml"
 FULL_IMAGE="${DOCKER_HUB_USERNAME}/micro-${IMG_NAME}"
