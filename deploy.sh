@@ -7,10 +7,10 @@ set -Eeuo pipefail
 # ╚══════════════════════════════════════════════╝
 
 # ---------- CONFIGURATION ----------
-IMG_FILE_NAME="tax-service/Dockerfile"
-IMG_NAME="tax-service:v1.0"
+IMG_FILE_NAME="auth-service/Dockerfile"
+IMG_NAME="auth-service:v1.1"
 DOCKER_HUB_USERNAME="hemantdevgan"
-K8S_FILE_NAME="k8s/tax-service.yml"
+K8S_FILE_NAME="k8s/auth-service.yml"
 FULL_IMAGE="${DOCKER_HUB_USERNAME}/micro-${IMG_NAME}"
 
 # ---------- TERMINAL COLORS ----------
