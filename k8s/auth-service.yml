@@ -29,6 +29,15 @@ spec:
           value: "admin"
         - name: POSTGRES_PASSWORD
           value: "admin123"
+        - name: SSO_BACKEND_CALLBACK_URL
+          value: "http://3.24.124.211:30006/api/v1/auth/callback"
+
+        - name: SSO_DEFAULT_FRONTEND_REDIRECT
+          value: "http://3.24.124.211:3001/auth/callback"
+
+        - name: SSO_ALLOWED_REDIRECT_URIS
+          value: "http://3.24.124.211:3001/auth/callback,http://3.24.124.211:3000/auth/callback,http://localhost:3001/auth/callback,http://localhost:3000/auth/callback"
+
 
 ---
 apiVersion: v1
