@@ -25,15 +25,11 @@ spec:
               cat > /work/config.yaml <<'APISIX_CONFIG'
               apisix:
                 node_listen: 9080
-                enable_admin: true
+
               deployment:
-                role: traditional
-                role_traditional:
+                role: data_plane
+                role_data_plane:
                   config_provider: yaml
-                admin:
-                  allow_admin:
-                    - 127.0.0.0/24
-                    - 10.0.0.0/8
               APISIX_CONFIG
               cat > /work/apisix.yaml <<'APISIX_ROUTES'
               upstreams:
@@ -94,7 +90,7 @@ spec:
                 plugins:
                   prometheus: {}
                   cors:
-                    allow_origins: http://localhost:3000,http://ecommerce.local,http://ecommerce.local:9090,"*"
+                    allow_origins: http://localhost:3000,http://ecommerce.local,http://ecommerce.local:9090
                     allow_methods: GET,POST,PUT,DELETE,PATCH,OPTIONS
                     allow_headers: Authorization,Content-Type,X-Requested-With
                     max_age: 3600
@@ -420,7 +416,6 @@ spec:
                     use_jwks: true
                     token_signing_alg_values_expected: RS256
               #END
-              #END
               APISIX_ROUTES
               chmod 0444 /work/config.yaml /work/apisix.yaml
           volumeMounts:
@@ -435,8 +430,7 @@ spec:
             - name: metrics
               containerPort: 9091
           env:
-            # Placeholder only. Your ecommerce-client is configured as public;
-            # remove this env var and client_secret from OIDC plugin routes if unused.
+            # Placeholder retained from your test setup; not a real Keycloak secret.
             - name: KEYCLOAK_CLIENT_SECRET
               value: "admin123"
           volumeMounts:
