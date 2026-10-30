@@ -484,4 +484,4 @@ spec:
     - name: proxy
       port: 9080
       targetPort: 9080
-      nodePort: 30005
+      nodePort: 30006
