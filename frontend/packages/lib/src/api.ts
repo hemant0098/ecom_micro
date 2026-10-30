@@ -8,7 +8,7 @@ import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 //   api.ecommerce.local   → api.ecommerce.local  (already correct)
 // Set NEXT_PUBLIC_API_URL at build time only if the API lives on an unrelated host.
 function resolveApiBaseUrl(): string {
-  if (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL as string;
+  if (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_URL) return "http://3.24.124.211:30006" as string;
   if (typeof window !== "undefined") {
     const { protocol, hostname, port } = window.location;
     const parts = hostname.split(".");
