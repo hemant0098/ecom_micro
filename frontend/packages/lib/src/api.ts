@@ -7,16 +7,29 @@ import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 //   admin.ecommerce.local → api.ecommerce.local  (not api.admin.ecommerce.local)
 //   api.ecommerce.local   → api.ecommerce.local  (already correct)
 // Set NEXT_PUBLIC_API_URL at build time only if the API lives on an unrelated host.
+// function resolveApiBaseUrl(): string {
+//   if (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL as string;
+//   if (typeof window !== "undefined") {
+//     const { protocol, hostname, port } = window.location;
+//     const parts = hostname.split(".");
+//     const rootDomain = parts.length > 2 ? parts.slice(1).join(".") : hostname;
+//     const apiHost = `api.${rootDomain}`;
+//     return `${protocol}//${apiHost}${port ? `:${port}` : ""}`;
+//   }
+//   return "";
+// }
+
+// export const API_BASE_URL = resolveApiBaseUrl();
+
+// export const apiClient = axios.create({
+//   baseURL: API_BASE_URL,
+//   headers: { "Content-Type": "application/json" },
+//   timeout: 10000,
+// });
+
+// APISIX API Gateway URL
 function resolveApiBaseUrl(): string {
-  if (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_URL) return "http://3.24.124.211:30006" as string;
-  if (typeof window !== "undefined") {
-    const { protocol, hostname, port } = window.location;
-    const parts = hostname.split(".");
-    const rootDomain = parts.length > 2 ? parts.slice(1).join(".") : hostname;
-    const apiHost = `api.${rootDomain}`;
-    return `${protocol}//${apiHost}${port ? `:${port}` : ""}`;
-  }
-  return "";
+  return "http://3.24.124.211:30006";
 }
 
 export const API_BASE_URL = resolveApiBaseUrl();
