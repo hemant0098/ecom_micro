@@ -90,7 +90,7 @@ spec:
                 plugins:
                   prometheus: {}
                   cors:
-                    allow_origins: http://localhost:3000,http://ecommerce.local,http://ecommerce.local:9090
+                    allow_origins: http://localhost:3000,http://localhost:3001,http://ecommerce.local,http://ecommerce.local:9090,http://3.26.224.232:3000,http://3.26.224.232:3001
                     allow_methods: GET,POST,PUT,DELETE,PATCH,OPTIONS
                     allow_headers: Authorization,Content-Type,X-Requested-With
                     max_age: 3600

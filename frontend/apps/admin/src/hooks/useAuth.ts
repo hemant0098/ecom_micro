@@ -46,6 +46,9 @@ export function useSsoCallback() {
 
         setAuth(user, tokens.access_token, tokens.refresh_token);
 
+        console.log("SSO NEXT:", sessionStorage.getItem(SSO_NEXT_KEY));
+        console.log("CURRENT PATH:", window.location.pathname);
+
         const next = sessionStorage.getItem(SSO_NEXT_KEY) || "/admin/dashboard";
         sessionStorage.removeItem(SSO_NEXT_KEY);
         const normalizedNext = next.replace(/^\/(en|vi)(?=\/|$)/, "") || "/admin/dashboard";  //added
