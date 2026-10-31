@@ -69,10 +69,11 @@ apiClient.interceptors.response.use(
             return apiClient(originalRequest);
           }
         }
-      } catch {
+      } catch(refreshError) {
+        console.error("Token refresh failed:", refreshError);
         localStorage.removeItem("access_token");
         localStorage.removeItem("refresh_token");
-        window.location.href = "/login";
+        window.location.href = "/";
       }
     }
     return Promise.reject(error);
