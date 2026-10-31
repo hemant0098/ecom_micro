@@ -31,7 +31,8 @@ spec:
           value: "admin123"
         - name: SSO_BACKEND_CALLBACK_URL
           value: "http://3.24.124.211:30006/api/v1/auth/callback"
-
+        - name: KEYCLOAK_PUBLIC_SERVER_URL
+          value: "http://3.24.124.211:30001"
         - name: SSO_DEFAULT_FRONTEND_REDIRECT
           value: "http://3.24.124.211:3001/auth/callback"
 

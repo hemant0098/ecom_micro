@@ -48,7 +48,8 @@ export function useSsoCallback() {
 
         const next = sessionStorage.getItem(SSO_NEXT_KEY) || "/admin/dashboard";
         sessionStorage.removeItem(SSO_NEXT_KEY);
-        router.replace(next);
+        const normalizedNext = next.replace(/^\/(en|vi)(?=\/|$)/, "") || "/admin/dashboard";  //added
+        router.replace(normalizedNext);
         router.refresh();
       } catch {
         setStatus("error");
