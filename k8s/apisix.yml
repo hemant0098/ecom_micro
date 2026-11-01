@@ -298,7 +298,7 @@ spec:
                   openid-connect:
                     client_id: ecommerce-client
                     client_secret: $env://KEYCLOAK_CLIENT_SECRET
-                    discovery: http://3.24.124.3.24.124.211:30001/realms/ecommerce/.well-known/openid-configuration
+                    discovery: http://3.24.124.211:30001/realms/ecommerce/.well-known/openid-configuration
                     realm: ecommerce
                     bearer_only: true
                     use_jwks: true
@@ -314,7 +314,7 @@ spec:
                   openid-connect:
                     client_id: ecommerce-client
                     client_secret: $env://KEYCLOAK_CLIENT_SECRET
-                    discovery: http://3.24.124.3.24.124.211:30001/realms/ecommerce/.well-known/openid-configuration
+                    discovery: http://3.24.124.211:30001/realms/ecommerce/.well-known/openid-configuration
                     realm: ecommerce
                     bearer_only: true
                     use_jwks: true
