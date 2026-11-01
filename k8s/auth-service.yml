@@ -35,7 +35,8 @@ spec:
           value: "http://3.24.124.211:30001"
         - name: SSO_DEFAULT_FRONTEND_REDIRECT
           value: "http://3.24.124.211:3001/auth/callback"
-
+        - name: KEYCLOAK_CLIENT_SECRET
+          value: "94UlAgmzAr4f1F0fveYPH9PgpZFm68sj"
         - name: SSO_ALLOWED_REDIRECT_URIS
           value: "http://3.24.124.211:3001/auth/callback,http://3.24.124.211:3000/auth/callback,http://localhost:3001/auth/callback,http://localhost:3000/auth/callback"
 
