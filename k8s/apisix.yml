@@ -213,6 +213,10 @@ spec:
                     bearer_only: true
                     use_jwks: true
                     token_signing_alg_values_expected: RS256
+                  proxy-rewrite:
+                    regex_uri:
+                    - ^/(.*)
+                    - /auth/$1
               - id: order-carts
                 upstream_id: 3
                 uris:
